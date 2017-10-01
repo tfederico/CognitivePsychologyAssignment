@@ -3,12 +3,12 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-  <title>Online dementia test</title>
+  <title>Questions</title>
 
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/styleQuestions.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
 <body>
   <nav class="blue darken-1" role="navigation">
@@ -29,19 +29,11 @@
   <div class="section no-pad-bot" id="index-banner">
     <div class="container">
       <br><br>
-      <h1 class="header center light-blue-text lighten-2">Online dementia test</h1>
+      <h1 class="header center light-blue-text lighten-2">SAGE test</h1>
       <div class="row left">
-        <p id="intro">
-          In this website, you will find a serie of test. Please complete them on your own without any kind of help.
-          Nobody, except for the doctor, will know that you have done this test, so feel free about your answers.
-          If you have already done a test in this website, please log in before starting a new test. If this is your first time, please subscribe in order to keep track of your progress.
-          You will find both of these options in the upper right corner of this page.
-          In case you have any doubt, you can click on the red dot mark in the lower right corner of this page.
-          A menu with different options will appear.
+        <p>
+          Proceed with the test. Take your time. Whatever, I don't care.
         </p>
-      </div>
-      <div class="row center">
-        <a href="questions.html" id="download-button" class="btn-large waves-effect waves-light light-blue lighten-2">Start the Test</a>
       </div>
       <br><br>
 
@@ -50,46 +42,69 @@
   <div class="container">
     <div class="section">
 
-      <!--   Icon Section
-      <div class="row">
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center light-blue-text lighten"><i class="material-icons">broken_image</i></h2>
-            <h5 class="center">SAGE test</h5>
+      <form action="#!">
 
-            <p class="light">Description of test</p>
-          </div>
+        <div id="memory" class="subform">
+          <span class="question">Have you had any problems with memory or thinking?</span><br>
+          <input type="radio" name="memory" id="memory1" value="yes" />
+          <label for="memory1">Yes</label><br>
+          <input type="radio" name="memory" id="memory2" value="occasionaly" />
+          <label for="memory2">Only occasionaly</label><br>
+          <input type="radio" name="memory" id="memory3" value="no" />
+          <label for="memory3">No</label><br>
         </div>
 
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center light-blue-text"><i class="material-icons">compare</i></h2>
-            <h5 class="center">Mini-Cog</h5>
-
-            <p class="light">Description of test</p>
-          </div>
+        <div id="relativeMemory" class="subform">
+          <span class="question">Have you had any blood relatives that have had problems with memory or thinking?</span><br>
+          <input type="radio" name="relativeMemory" id="relativeMemory1" value="yes" />
+          <label for="relativeMemory1">Yes</label><br>
+          <input type="radio" name="relativeMemory" id="relativeMemory2" value="no" />
+          <label for="relativeMemory2">No</label><br>
         </div>
 
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center light-blue-text"><i class="material-icons">autorenew</i></h2>
-            <h5 class="center">Neurotrack</h5>
-
-            <p class="light">Description of test</p>
-          </div>
+        <div id="majorStroke" class="subform">
+          <span class="question">Have you ever had a major stroke?</span><br>
+          <input type="radio" name="majorStroke" id="majorStroke1" value="yes" />
+          <label for="majorStroke1">Yes</label><br>
+          <input type="radio" name="majorStroke" id="majorStroke2" value="no" />
+          <label for="majorStroke2">No</label><br>
         </div>
 
-
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center light-blue-text"><i class="material-icons">settings</i></h2>
-            <h5 class="center">Gate</h5>
-
-            <p class="light">Description of test</p>
+        <div id="minorStroke" class="subform">
+          <span class="question">A minor or mini-stroke?</span><br>
+          <input type="radio" name="minorStroke" id="minorStroke1" value="yes" />
+          <label for="minorStroke1">Yes</label><br>
+          <input type="radio" name="minorStroke" id="minorStroke2" value="no" />
+          <label for="minorStroke2">No</label><br>
         </div>
-        -->
+
+        <div id="sad" class="subform">
+          <span class="question">Do you currently feel sad or depressed?</span><br>
+          <input type="radio" name="depressed" id="depressed1" value="yes" />
+          <label for="depressed1">Yes</label><br>
+          <input type="radio" name="depressed" id="depressed2" value="occasionaly" />
+          <label for="depressed2">Only occasionaly</label><br>
+          <input type="radio" name="depressed" id="depressed3" value="no" />
+          <label for="depressed3">No</label><br>
         </div>
-      </div>
+
+        <div id="pictures" class="subform">
+          <span class="question">Name the following pictures:</span><br/>
+
+          <img src="img/img1.png" class="testImages"/><br>
+          <label for="firstPicture">Write your answer here:</label><br>
+          <input type="text" name="firstPicture" id="firstPicture" class="shortText"><br>
+
+          <img src="img/img2.png" class="testImages"/><br>
+          <label for="secondPicture">Write your answer here:</label><br>
+          <input type="text" name="secondPicture" id="secondPicture" class="shortText">
+        </div>
+
+        <input type="submit">
+      </form>
+
+
+
 
     </div>
     <br><br>

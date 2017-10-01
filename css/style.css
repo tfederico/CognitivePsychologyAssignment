@@ -17,3 +17,12 @@
   font: inherit;
   font-size: 12;
 }
+
+nav {
+  min-height: 5em;
+}
+
+input {
+  visibility: visible;
+  opacity: 1;
+}
