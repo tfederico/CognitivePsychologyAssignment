@@ -26,3 +26,11 @@ input {
   visibility: visible;
   opacity: 1;
 }
+
+.nav-wrapper a{
+  min-height: 5em;
+}
+
+#logo{
+  margin-bottom: 1em;
+}

@@ -25,15 +25,48 @@ nav {
 .subform {
   margin: 1em;
   margin-left: 0;
+  min-height: 4em;
   max-height: none;
 }
 
 .question {
-  max-height: none;
   margin-bottom: 1em;
+  display: block;
+}
 
+#questions {
+  min-height: 30em;
 }
 
 .shortText {
   max-width: 40em;
+}
+
+#memory {
+  display: block;
+}
+
+#relativeMemory{
+  display: none;
+}
+
+#majorStroke{
+  display: none;
+}
+
+#minorStroke{
+  display: none;
+}
+
+#sad{
+  display: none;
+}
+
+#pictures{
+  display: none;
+}
+
+#final{
+  font: 16;
+  display: none;
 }
